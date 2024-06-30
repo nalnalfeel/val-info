@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:id="@+id/am_iv_splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_background"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/am_rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/str_for_login" />
+
+        </LinearLayout>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="-30dp"
+            android:id="@+id/card_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="35dp"
+                android:background="@color/myPrime">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please login with your information"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:alpha="0.7"
+                    android:layout_marginBottom="30dp"/>
+
+                <EditText
+                    android:id="@+id/editEmailLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email Address"
+                    android:textColorHint="@color/mySecondColor"
+                    android:textSize="20sp"
+                    android:drawableEnd="@drawable/email_ic"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="15dp"/>
+
+                <EditText
+                    android:id="@+id/editPasswordLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:textColorHint="@color/mySecondColor"
+                    android:textSize="20sp"
+                    android:drawableEnd="@drawable/password_ic"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="12dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/rememberMeChecklist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remember me"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="10dp"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/mySecondColor"
+                    app:cornerRadius="30sp"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/textViewRegisterLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't you have an account? Register here"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="14dp"
+                    android:textColor="@color/myThirdColor"
+                    android:layout_marginBottom="90dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Valdo Internasional"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginBottom="30dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    
+</FrameLayout>
